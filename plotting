@@ -1,0 +1,9 @@
+lap = session.laps.pick_drivers('NOR').pick_fastest() 
+
+tel= lap.get_car_data().add_distance()
+
+plt.plot(tel['Distance'], tel['Speed'])
+plt.xlabel('Distance')
+plt.ylabel('Speed')
+plt.title('Speed vs Distance (NORRIS)')
+plt.show()
