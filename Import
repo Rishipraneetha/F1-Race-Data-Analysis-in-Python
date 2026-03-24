@@ -1,0 +1,18 @@
+!pip install fastf1
+
+import os
+import fastf1 as ff1
+from fastf1 import plotting
+from matplotlib import pyplot as plt
+from matplotlib.pyplot import figure
+
+os.makedirs('cache', exist_ok=True)
+
+ff1.Cache.enable_cache('cache')
+
+session = ff1.get_session(2025, 'Monaco', 'R')
+session.load()
+laps = session.laps
+lap = laps.pick_fastest()
+
+print(lap)
