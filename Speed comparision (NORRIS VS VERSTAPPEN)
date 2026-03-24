@@ -1,0 +1,14 @@
+nor = session.laps.pick_drivers(["NOR"]).pick_fastest()
+ver = session.laps.pick_drivers(["VER"]).pick_fastest()
+
+nor_tel = nor.get_car_data().add_distance()
+ver_tel = ver.get_car_data().add_distance()
+
+plt.plot(nor_tel["Distance"],nor_tel["Speed"])
+plt.plot(ver_tel['Distance'],ver_tel["Speed"])
+
+plt.xlabel('Distance')
+plt.ylabel('Speed')
+plt.plot('NORRIS VS VERSTAPPEN')
+plt.show()
+
