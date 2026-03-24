@@ -1,0 +1,19 @@
+ham = session.laps.pick_drivers(['HAM']).pick_fastest()
+ham_tel = ham.get_car_data().add_distance()
+
+
+from fastf1.utils import delta_time
+
+ref = ham
+compare = ver
+
+delta, ref_tel, compare_tel = delta_time(ref, compare)
+
+plt.figure()
+plt.plot(ref_tel['Distance'], delta)
+
+plt.axhline(0, linestyle='--', color='black')
+plt.title('Delta Time (HAM VS VER)')
+plt.xlabel('Distance')
+plt.ylabel('Time Difference')
+plt.show()
