@@ -1,0 +1,8 @@
+laps = session.laps.pick_drivers(['NOR','VER'])
+
+plt.figure()
+plt.hist(laps['LapTime'].dt.total_seconds(),bins=20)
+
+plt.title('Lap Time Distribution')
+plt.xlabel('Lap Time(s)')
+plt.show()
