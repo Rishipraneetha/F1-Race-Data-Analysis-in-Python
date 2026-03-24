@@ -1,0 +1,8 @@
+tel = nor.get_car_data().add_distance()
+plt.figure()
+plt.plot(tel['Distance'], tel['Throttle'], label= 'Throttle')
+plt.plot(tel['Distance'], tel['Brake'], label='Brake')
+
+plt.legend()
+plt.title('Throttle vs Brake (HAMMER)')
+plt.show()
