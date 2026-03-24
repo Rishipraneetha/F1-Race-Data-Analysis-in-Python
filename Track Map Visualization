@@ -1,0 +1,7 @@
+pos = nor.get_pos_data()
+
+plt.figure()
+plt.plot(pos['X'], pos['Y'], color='blue')
+plt.title('Track')
+plt.axis('equal')
+plt.show()
